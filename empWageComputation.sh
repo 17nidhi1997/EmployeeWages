@@ -24,3 +24,14 @@ echo "Hours of Full day Employee is : $day_hour"
 echo "Dialy Wage of the Employee  is: $daily_wage"
 }
 dailyEmployeeWage
+
+#UC 3
+---------------------
+partDailyEmployeeWage()
+{
+day_hour=4
+daily_wage=$(( $PER_HOUR * $day_hour |bc -l ))
+echo "Hours of Full day Employee is : $day_hour"
+echo "Dialy Wage for Part Time Employee  is: $daily_wage"
+}
+partDailyEmployeeWage
