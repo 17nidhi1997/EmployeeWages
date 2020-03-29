@@ -1,4 +1,4 @@
-s#! /bin/bash
+#! /bin/bash
 
 #Welcome Message
 echo "Welcome to Employee Wage Computation Programme on Master Branch"
@@ -35,3 +35,7 @@ echo "Hours of Full day Employee is : $day_hour"
 echo "Dialy Wage for Part Time Employee  is: $daily_wage"
 }
 partDailyEmployeeWage
+
+#UC 4
+---------------------
+echo "From here solving using caseStatment"
