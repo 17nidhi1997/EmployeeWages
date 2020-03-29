@@ -62,3 +62,15 @@ $day) echo "Full time wage of total working days of a month is :"
        ;;
 
 esac
+
+#UC 6
+---------------------
+case "1" in
+1) echo "Full time wage of total working days of a month is :"
+           months=$(($PER_HOUR * $FULLTIME |bc -l))
+           echo " $months"
+           echo "Part time wage of total working days of a month is :"
+           months=$(($PER_HOUR * $PARTTIME |bc -l))
+           echo " $months"
+          ;;
+esac
