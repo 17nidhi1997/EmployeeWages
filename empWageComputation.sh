@@ -85,3 +85,23 @@ workHrs=$(( $PARTTIME / $PER_HOUR |bc -l))
 echo "$workHrs: hrs for Part Time Working Hours"
 }
 workHours
+
+
+#UC 8
+---------------------
+declare -A storeDialyWage
+echo "Press 1 For part time wage"
+echo "press 2 for part time wage"
+read option
+case $option in
+1)  for (( days=1;days<=20;days++ ))
+    do
+    dayss=$(( $PARTTIME * $days |bc -l))
+    part=(storeDialyWage[$dayss])
+    done ;;
+2)  for (( days=1;days<=20;days++ ))
+    do
+    dayss=$(( $FULLTIME * $days |bc -l))
+    full=(storeDialyWage[$dayss])
+    done ;;
+esac
