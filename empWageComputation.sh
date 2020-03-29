@@ -39,3 +39,26 @@ partDailyEmployeeWage
 #UC 4
 ---------------------
 echo "From here solving using caseStatment"
+
+#UC 5
+---------------------
+FULLTIME=160
+PARTTIME=80
+month()
+{
+a=$1
+for (( days=1;days<=20;days++ ))
+do
+dayss=$(($a * $days |bc -l))
+echo "$dayss"
+done
+}
+day=1
+case "$day" in
+$day) echo "Full time wage of total working days of a month is :"
+      month $FULLTIME
+      echo "Part time wage of total working days of a month is :"
+      month $PARTTIME
+       ;;
+
+esac
