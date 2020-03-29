@@ -74,3 +74,14 @@ case "1" in
            echo " $months"
           ;;
 esac
+
+#UC 7
+---------------------
+workHours()
+{
+workHrs=$(( $FULLTIME / $PER_HOUR |bc -l))
+echo "$workHrs: hrs for Full Time Working Hours"
+workHrs=$(( $PARTTIME / $PER_HOUR |bc -l))
+echo "$workHrs: hrs for Part Time Working Hours"
+}
+workHours
