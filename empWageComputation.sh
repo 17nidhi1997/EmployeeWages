@@ -105,3 +105,40 @@ case $option in
     full=(storeDialyWage[$dayss])
     done ;;
 esac
+
+#UC 9
+---------------------
+declare -A array
+echo "Press 1 For part time wage"
+echo "Press 2 For Full time wage"
+read option
+case $option in
+1) for(( days=1;days<=20;days++ ))
+   do
+   dayss=$(( $FULLTIME * $days |bc -l))
+   day=1
+   array[$day]=$dayss
+   for key in "${!array[@]}"
+   do
+   a=array[$key]
+   done
+   done
+   MonthWage=$(($PER_HOUR *  $FULLTIME |bc -l))
+   echo "Full time Total wage $MonthWage"
+     ;;
+2) for(( days=1;days<=20;days++ ))
+   do
+   dayss=$(( $PARTTIME * $days |bc -l))
+   day=1
+   array[$day]=$dayss
+   for key in "${!array[@]}"
+   do
+   b=array[$key]
+   done
+   done
+   MonthWage=$(($PER_HOUR * $PARTTIME |bc -l))
+   echo "Part time Total wage $MonthWage"
+     ;;
+*) echo "enter corect option"
+  ;;
+esac
